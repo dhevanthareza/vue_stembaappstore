@@ -4,7 +4,7 @@ import Home from './views/Home.vue'
 import root from "./components/root"
 import develop from "./components/develop"
 import network from "./components/network"
-import design from "./components/simulate"
+import design from "./components/design"
 import simulate from "./components/simulate"
 
 Vue.use(Router)
