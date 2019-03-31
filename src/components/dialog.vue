@@ -6,7 +6,7 @@
           <v-flex xs6>
             <v-layout row wrap align-center>
               <v-flex xs3>
-                <img :src='"./img/" + detailData.nick + ".png"' width="100%">
+                <img :src='"./../assets/img/" + detailData.nick + ".png"' width="100%">
               </v-flex>
               <v-flex style="padding-left: 20px" xs9>
                 <h1>{{ detailData.name }}</h1>

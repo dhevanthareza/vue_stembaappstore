@@ -1,19 +1,5 @@
 [
   {
-    "id": 0,
-    "name": "Oracle VM VirtualBox",
-    "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
-    "nick": "virtualbox",
-    "kat": "simulate"
-  },
-  {
-    "id": 1,
-    "name": "Oracle VM VirtualBox",
-    "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
-    "nick": "virtualbox",
-    "kat": "tkj"
-  },
-  {
     "id": 2,
     "name": "FileZilla",
     "desc": "FileZilla adalah salah satu software FTP Client gratis, open source dan cross-platform. Perangkat lunak ini tersedia untuk Windows, Linux, dan Mac OS X. Mendukung teknologi FTP, SFTP, dan FTPS (FTP di SSL/TLS). Sejak 5 Maret 2009, software ini adalah software kelima yang paling banyak diunduh sepanjang masa dari SourceForge.net.",
@@ -285,12 +271,5 @@
     "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
     "nick": "virtualbox",
     "kat": "simulate"
-  },
-  {
-    "id": 41,
-    "name": "Oracle VM VirtualBox",
-    "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
-    "nick": "virtualbox",
-    "kat": "develop"
   }
 ]

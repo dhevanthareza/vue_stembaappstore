@@ -3,14 +3,10 @@
     <div id="app">
       <v-app id="inspire">
         <v-navigation-drawer fixed v-model="drawer" app>
-          <v-list class="pa-0">
-            <v-list-tile avatar style="padding: 20px 10px 20px 0">
-              <v-avatar :tile="false" size="70px" color="grey lighten-4" style="margin: 0 20px 0 0;">
-                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="avatar">
-              </v-avatar>
-
+          <v-list dense>
+            <v-list-tile style="padding: 20px 10px 20px 0">
               <v-list-tile-content>
-                <v-list-tile-title><h1>{{username}}</h1></v-list-tile-title>
+                <v-list-tile-title class="title"><h1>{{username}}</h1></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list>
@@ -18,39 +14,38 @@
             <v-divider></v-divider>
             <v-list-tile ripple to="/">
               <v-list-tile-content>
-                <v-list-tile-title>Home</v-list-tile-title>
+                <v-list-tile-title><h3>All</h3></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/develop">
               <v-list-tile-content>
-                <v-list-tile-title>Develop</v-list-tile-title>
+                <v-list-tile-title><h3>Develop</h3></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/simulate">
               <v-list-tile-content>
-                <v-list-tile-title>Simulator</v-list-tile-title>
+                <v-list-tile-title><h3>Simulator</h3></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/network">
               <v-list-tile-content>
-                <v-list-tile-title>Network</v-list-tile-title>
+                <v-list-tile-title><h3>Network</h3></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/design">
               <v-list-tile-content>
-                <v-list-tile-title>Design</v-list-tile-title>
+                <v-list-tile-title><h3>Design</h3></v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
           </v-list>
         </v-navigation-drawer>
-        <v-toolbar color="indigo" dark fixed app>
+        <v-toolbar color="transparent" absolute="" flat dark app>
           <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
-          <v-toolbar-title>Stemba App Store</v-toolbar-title>
         </v-toolbar>
         <v-content>
           <router-view></router-view>
