@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-container grid-list-md>
       <v-layout row wrap align-content-center justify-center>
         <v-flex xs4 v-for="(i,index) in data" v-bind:key="index">
@@ -21,7 +21,7 @@
     </v-container>
     <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
-        <v-toolbar dark color="primary">
+        <v-toolbar dark color="orange">
           <v-btn icon dark @click="dialog = false">
             <v-icon>close</v-icon>
           </v-btn>
