@@ -5,12 +5,19 @@
         <v-navigation-drawer fixed v-model="drawer" app>
           <v-list class="pa-0">
             <v-list-tile avatar style="padding: 20px 10px 20px 0">
-              <v-avatar :tile="false" size="70px" color="grey lighten-4" style="margin: 0 20px 0 0;">
+              <v-avatar
+                :tile="false"
+                size="70px"
+                color="grey lighten-4"
+                style="margin: 0 20px 0 0;"
+              >
                 <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="avatar">
               </v-avatar>
 
               <v-list-tile-content>
-                <v-list-tile-title><h1>{{username}}</h1></v-list-tile-title>
+                <v-list-tile-title>
+                  <h1>{{username}}</h1>
+                </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </v-list>
@@ -48,7 +55,7 @@
             <v-divider></v-divider>
           </v-list>
         </v-navigation-drawer>
-        <v-toolbar color="indigo" dark fixed app>
+        <v-toolbar color="orange" dark fixed app>
           <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
           <v-toolbar-title>Stemba App Store</v-toolbar-title>
         </v-toolbar>
@@ -107,7 +114,7 @@ export default {
   },
   created() {
     let os = require("os");
-    console.log(os.userInfo())
+    console.log(os.userInfo());
     this.username = os.userInfo().username;
   }
 };

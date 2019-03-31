@@ -25,11 +25,8 @@
           <v-btn icon dark @click="dialog = false">
             <v-icon>close</v-icon>
           </v-btn>
-          <v-toolbar-title>Settings</v-toolbar-title>
+          <v-toolbar-title>{{ detailData.name }}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn dark flat @click="dialog = false">Install</v-btn>
-          </v-toolbar-items>
         </v-toolbar>
         <mdialog :detailData="detailData"></mdialog>
       </v-card>

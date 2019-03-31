@@ -16,7 +16,7 @@
                 <p>{{ detailData.desc }}</p>
               </v-flex>
               <v-flex xs12 style="padding:30px; padding-left:10px">
-                <v-btn color="primary" block :loading="progress" @click="install">Install</v-btn>
+                <v-btn color="orange" block :loading="progress" @click="install">Install</v-btn>
               </v-flex>
             </v-layout>
           </v-flex>
