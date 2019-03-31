@@ -6,7 +6,7 @@
           <v-flex xs6>
             <v-layout row wrap align-center>
               <v-flex xs3>
-                <img :src='"./../assets/img/" + detailData.nick + ".png"' width="100%">
+                <img :src='"./img/" + detailData.nick + ".png"' width="100%">
               </v-flex>
               <v-flex style="padding-left: 20px" xs9>
                 <h1>{{ detailData.name }}</h1>
@@ -44,6 +44,7 @@
 </style>
 
 <script>
+var sudo = require("sudo-prompt");
 export default {
   props: ["detailData"],
   data() {
@@ -54,31 +55,55 @@ export default {
   },
   methods: {
     bash() {
-        let app = this.detailData.nick
-        let m = this
+      let app = this.detailData.nick;
+      let m = this;
       return new Promise(function(resolve, reject) {
         const { exec } = require("child_process");
-        console.log("./src/assets/bash/" + app + ".sh")
-        exec(
-          "./src/assets/bash/" + app + ".sh",
-          (error, stdout, stderr) => {
-            if (error) {
-              m.progress = false;
-              m.progressDetail = error
-              console.log("bash error : " + error);
-              return;
-            }
-            if (stderr) {
-              m.progress = false;
-              m.progressDetail = error
-              console.log("stderror : " + stderr);
-              return
-            }
-            resolve('ok')
-            m.progressDetail = m.progressDetail + stdout;
-            console.log(stdout);
+        console.log("mausk promis");
+        var options = {
+          name: "Stemba App Store"
+        };
+        sudo.exec("/opt/stemba/" + app + ".sh", options, function(
+          error,
+          stdout,
+          stderr
+        ) {
+          if (error) {
+            m.progress = false;
+            m.progressDetail = error;
+            console.log("bash error : " + error);
+            return;
           }
-        );
+          if (stderr) {
+            m.progress = false;
+            m.progressDetail = error;
+            console.log("stderror : " + stderr);
+            return;
+          }
+          resolve("ok");
+          m.progressDetail = m.progressDetail + stdout;
+          console.log(stdout);
+        });
+        // exec(
+        //   "/opt/stemba/" + app + ".sh",
+        //   (error, stdout, stderr) => {
+        //     if (error) {
+        //       m.progress = false;
+        //       m.progressDetail = error
+        //       console.log("bash error : " + error);
+        //       return;
+        //     }
+        //     if (stderr) {
+        //       m.progress = false;
+        //       m.progressDetail = error
+        //       console.log("stderror : " + stderr);
+        //       return
+        //     }
+        //     resolve('ok')
+        //     m.progressDetail = m.progressDetail + stdout;
+        //     console.log(stdout);
+        //   }
+        // );
       });
     },
     install() {
@@ -86,28 +111,28 @@ export default {
       const { exec } = require("child_process");
       var online = navigator.onLine;
       if (online) {
-          console.log('online')
+        console.log("online");
         this.bash().then(() => {
-            console.log('ini sampe fixing')
-          exec("./src/assets/bash/rm.sh", (error, stdout, stderr) => {
+          console.log("ini sampe fixing");
+          sudo.exec("/opt/stemba/rm.sh", (error, stdout, stderr) => {
             if (error) {
               this.progress = false;
-              this.progressDetail = error
+              this.progressDetail = error;
               console.log("fixing error : " + error);
               return;
             }
             if (stderr) {
               this.progress = false;
-              this.progressDetail = stderr
+              this.progressDetail = stderr;
               console.log("fixing std error : " + stderr);
               return;
             }
             this.progressDetail = this.progressDetail + stdout;
-            let m = this
-            setTimeout(function(){ 
-                alert("aplikasi berhasil diinstall"); 
-                m.progress=false
-                }, 3000);
+            let m = this;
+            setTimeout(function() {
+              alert("aplikasi berhasil diinstall");
+              m.progress = false;
+            }, 3000);
             console.log(stdout);
           });
         });
