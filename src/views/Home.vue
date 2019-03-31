@@ -2,49 +2,71 @@
   <v-app dark>
     <div id="app">
       <v-app id="inspire">
-        <v-navigation-drawer fixed v-model="drawer" app>
+        <v-navigation-drawer width="250px" fixed v-model="drawer" app>
           <v-list dense>
-            <v-list-tile style="padding: 20px 10px 20px 0">
-              <v-list-tile-content>
-                <v-list-tile-title class="title"><h1>{{username}}</h1></v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
-          <v-list dense>
+            <div style="padding: 20px 10px 20px 10px">
+              <h1>Hello</h1>
+              <h1>{{username}} !</h1>
+            </div>
             <v-divider></v-divider>
             <v-list-tile ripple to="/">
+              <v-list-tile-action>
+                <v-icon>home</v-icon>
+              </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title><h3>All</h3></v-list-tile-title>
+                <v-list-tile-title>
+                  <h3>All</h3>
+                </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/develop">
+              <v-list-tile-action>
+                <v-icon>developer_mode</v-icon>
+              </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title><h3>Develop</h3></v-list-tile-title>
+                <v-list-tile-title>
+                  <h3>Develop</h3>
+                </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/simulate">
+              <v-list-tile-action>
+                <v-icon>laptop</v-icon>
+              </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title><h3>Simulator</h3></v-list-tile-title>
+                <v-list-tile-title>
+                  <h3>Simulator</h3>
+                </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/network">
+              <v-list-tile-action>
+                <v-icon>language</v-icon>
+              </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title><h3>Network</h3></v-list-tile-title>
+                <v-list-tile-title>
+                  <h3>Network</h3>
+                </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
             <v-list-tile ripple to="/design">
+              <v-list-tile-action>
+                <v-icon>create</v-icon>
+              </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title><h3>Design</h3></v-list-tile-title>
+                <v-list-tile-title>
+                  <h3>Design</h3>
+                </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
             <v-divider></v-divider>
           </v-list>
         </v-navigation-drawer>
-        <v-toolbar color="transparent" absolute="" flat dark app>
+        <v-toolbar color="transparent" absolute flat dark app>
           <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
         <v-content>
@@ -59,7 +81,7 @@ const { exec } = require("child_process");
 export default {
   data() {
     return {
-      drawer: false,
+      drawer: true,
       username: ""
     };
   },
@@ -102,7 +124,7 @@ export default {
   },
   created() {
     let os = require("os");
-    console.log(os.userInfo())
+    console.log(os.userInfo());
     this.username = os.userInfo().username;
   }
 };
