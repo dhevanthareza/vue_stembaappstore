@@ -2,7 +2,29 @@
   <v-app dark>
     <div id="app">
       <v-app id="inspire">
+<<<<<<< HEAD
+        <v-navigation-drawer fixed v-model="drawer" app>
+          <v-list class="pa-0">
+            <v-list-tile avatar style="padding: 20px 10px 20px 0">
+              <v-avatar
+                :tile="false"
+                size="70px"
+                color="grey lighten-4"
+                style="margin: 0 20px 0 0;"
+              >
+                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="avatar">
+              </v-avatar>
+
+              <v-list-tile-content>
+                <v-list-tile-title>
+                  <h1>{{username}}</h1>
+                </v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list>
+=======
         <v-navigation-drawer width="250px" fixed v-model="drawer" app>
+>>>>>>> bc61067fda7d35170b132ddf9dfd7fcac23f559d
           <v-list dense>
             <div style="padding: 20px 10px 20px 10px">
               <h1>Hello</h1>
@@ -66,7 +88,11 @@
             <v-divider></v-divider>
           </v-list>
         </v-navigation-drawer>
+<<<<<<< HEAD
+        <v-toolbar color="orange" dark fixed app>
+=======
         <v-toolbar color="transparent" absolute flat dark app>
+>>>>>>> bc61067fda7d35170b132ddf9dfd7fcac23f559d
           <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
         </v-toolbar>
         <v-content>

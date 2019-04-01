@@ -1,4 +1,12 @@
 <template>
+<<<<<<< HEAD
+  <v-app dark>
+    <v-container grid-list-md>
+      <v-layout row wrap align-content-center justify-center>
+        <v-flex xs4 v-for="(i,index) in data" v-bind:key="index">
+          <v-card>
+            <img :src='"./../assets/img/" + i.nick + ".png"' height="200">
+=======
   <v-app>
     <v-container pa-0 grid-list-lg>
       <v-layout row wrap align-content-center>
@@ -17,6 +25,7 @@
               height="100"
               style="margin:20px 0 0 20px"
             >
+>>>>>>> bc61067fda7d35170b132ddf9dfd7fcac23f559d
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">{{i.name}}</h3>
@@ -35,15 +44,12 @@
     </v-container>
     <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
-        <v-toolbar dark color="primary">
+        <v-toolbar dark color="orange">
           <v-btn icon dark @click="dialog = false">
             <v-icon>close</v-icon>
           </v-btn>
-          <v-toolbar-title>Settings</v-toolbar-title>
+          <v-toolbar-title>{{ detailData.name }}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn dark flat @click="dialog = false">Install</v-btn>
-          </v-toolbar-items>
         </v-toolbar>
         <mdialog :detailData="detailData"></mdialog>
       </v-card>

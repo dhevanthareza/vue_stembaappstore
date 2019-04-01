@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-container grid-list-md>
       <v-layout row wrap align-content-center justify-center>
         <v-flex xs4 v-for="(i,index) in data" v-bind:key="index">
@@ -19,17 +19,14 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+    <v-dialog v-model="dialog" dark fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
-        <v-toolbar dark color="primary">
+        <v-toolbar dark color="orange">
           <v-btn icon dark @click="dialog = false">
             <v-icon>close</v-icon>
           </v-btn>
-          <v-toolbar-title>Settings</v-toolbar-title>
+          <v-toolbar-title>{{ detailData.name }}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn dark flat @click="dialog = false">Install</v-btn>
-          </v-toolbar-items>
         </v-toolbar>
         <mdialog :detailData="detailData"></mdialog>
       </v-card>
