@@ -59,6 +59,7 @@ export default {
       let m = this;
       return new Promise(function(resolve, reject) {
         const { exec } = require("child_process");
+        console.log(app)
         console.log("mausk promis");
         var options = {
           name: "Stemba App Store"
