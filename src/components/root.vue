@@ -1,12 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <v-app dark>
-    <v-container grid-list-md>
-      <v-layout row wrap align-content-center justify-center>
-        <v-flex xs4 v-for="(i,index) in data" v-bind:key="index">
-          <v-card>
-            <img :src='"./../assets/img/" + i.nick + ".png"' height="200">
-=======
   <v-app>
     <v-container pa-0 grid-list-lg>
       <v-layout row wrap align-content-center>
@@ -25,7 +17,6 @@
               height="100"
               style="margin:20px 0 0 20px"
             >
->>>>>>> bc61067fda7d35170b132ddf9dfd7fcac23f559d
             <v-card-title primary-title>
               <div>
                 <h3 class="headline mb-0">{{i.name}}</h3>
