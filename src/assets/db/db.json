@@ -1,5 +1,19 @@
 [
   {
+    "id": 0,
+    "name": "FreeCAD",
+    "desc": "FreeCAD adalah Sebuah aplikasi open source untuk membuat pemodelan pada 3D CAD / MCAD / CAX / CAE / PLM. Aplikasi FreeCad ini ditujukan langsung bagi para teknik mesin dan juga para desainer produk, namun secara keselurauhan aplikasi ini juga bisa dipergunakan untuk Proses rekayasa yang lebih luas seperti pada perancangan arsitektur atau pada spesialisasi teknik lainnya.",
+    "nick": "freecad",
+    "kat": "tp"
+  },
+  {
+    "id": 1,
+    "name": "LibreCAD",
+    "desc": "LibreCAD adalah Software CAD gratis yang dapat mendesain model 2D dengan sangat baik dengan tampilan yang sangat mudah dimengerti. LibreCad merupakan percabangan dari QCad yang dikembangkan sekitar tahun 2010-an. Qcad sendiri adalah aplikasi Cad 2D yang menyediaka versi gratis dan berbayar. Awalnya LibreCad bernama CADuntu namun, nama tersebut kurang sesuai dan akhirnya diganti dengan LibreCad. Pada awalnya LibreCad dibuat untuk membangun kemampuan pada sisi CAM menggunakan matchmate cnc router.",
+    "nick": "librecad",
+    "kat": "design"
+  },
+  {
     "id": 2,
     "name": "FileZilla",
     "desc": "FileZilla adalah salah satu software FTP Client gratis, open source dan cross-platform. Perangkat lunak ini tersedia untuk Windows, Linux, dan Mac OS X. Mendukung teknologi FTP, SFTP, dan FTPS (FTP di SSL/TLS). Sejak 5 Maret 2009, software ini adalah software kelima yang paling banyak diunduh sepanjang masa dari SourceForge.net.",
@@ -39,7 +53,7 @@
     "name": "Cisco Packet Tracer",
     "desc": "Packet Tracer merupakan aplikasi desain jaringan dari Cisco System. Cara terbaik untuk mempelajari jaringan adalah dengan mempraktekkannya. Cisco Packet Tracer alat inovasi konfigurasi jaringan, membantu Anda untuk mengasah kemampuan konfigurasi jaringan dengan perangkat desktop maupun perangkat mobile.",
     "nick": "packettracer",
-    "kat": "simulate"
+    "kat": ["simulate","network"]
   },
   {
     "id": 8,
@@ -88,14 +102,14 @@
     "name": "Basic 256",
     "desc": "BASIC-256 adalah salah satu wadah pemprograman yang Anda dapat membuat aplikasi komputer Anda sendiri. BASIC-256 bertujuan untuk mengenalkan dan sekaligus belajar dasar pemprograman komputer, khususnya untuk anak sekolah menengah umum. Kunjungi website https://www.rollapp.com/app/basic256",
     "nick": "basic256",
-    "kat": "simulate"
+    "kat": "develop"
   },
   {
     "id": 15,
     "name": "Arduino IDE",
     "desc": "Arduino IDE memudahkan menulis kode dan mengupload ke board arduino. Tersedia secara open source yang dapat berjalan di Windows, Mac dan Linux. Dibuat diatas Java, lebih lanjut kunjungi website https://www.arduino.cc/en/Main/Software. ",
     "nick": "arduino",
-    "kat": "simulate"
+    "kat": "develop"
   },
   {
     "id": 16,
@@ -183,93 +197,16 @@
   },
   {
     "id": 28,
-    "name": "Estru3D",
-    "desc": "Program struktur analisis yang menggunakan Metode Stiffness Matrix. Program ini memiliki interface grafik sendiri dan semuanya menggunakan GUI.",
-    "nick": "estru3d",
-    "kat": "tkbb"
+    "name": "Oracle VM VirtualBox",
+    "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
+    "nick": "virtualbox",
+    "kat": ["simulate", "network"]
   },
   {
     "id": 29,
     "name": "SweetHome3D",
     "desc": "Sweet Home 3D adalah aplikasi yang sempurna untuk membantu menempatkan furnitur di rumah kamu. Jika kamu ingin mendekorasi ulang apartemen atau mengatur ulang furnitur yang ada di dalam ruangan, Sweet Home 3D terbukti menjadi cara termudah untuk melakukanya. Aplikasi ini menyediakan 75 model furnitur yang dapat kamu tempatkan di setiap ruangan. Semua model diatur dalam kategori sesuai dengan penempatan mereka di rumah.",
     "nick": "sweethome3d",
-    "kat": "simulate"
-  },
-  {
-    "id": 30,
-    "name": "SweetHome3D",
-    "desc": "Sweet Home 3D adalah aplikasi yang sempurna untuk membantu menempatkan furnitur di rumah kamu. Jika kamu ingin mendekorasi ulang apartemen atau mengatur ulang furnitur yang ada di dalam ruangan, Sweet Home 3D terbukti menjadi cara termudah untuk melakukanya. Aplikasi ini menyediakan 75 model furnitur yang dapat kamu tempatkan di setiap ruangan. Semua model diatur dalam kategori sesuai dengan penempatan mereka di rumah.",
-    "nick": "sweethome3d",
     "kat": "tkbb"
-  },
-  {
-    "id": 31,
-    "name": "FreeCAD",
-    "desc": "FreeCAD adalah Sebuah aplikasi open source untuk membuat pemodelan pada 3D CAD / MCAD / CAX / CAE / PLM. Aplikasi FreeCad ini ditujukan langsung bagi para teknik mesin dan juga para desainer produk, namun secara keselurauhan aplikasi ini juga bisa dipergunakan untuk Proses rekayasa yang lebih luas seperti pada perancangan arsitektur atau pada spesialisasi teknik lainnya.",
-    "nick": "freecad",
-    "kat": "design"
-  },
-  {
-    "id": 32,
-    "name": "FreeCAD",
-    "desc": "FreeCAD adalah Sebuah aplikasi open source untuk membuat pemodelan pada 3D CAD / MCAD / CAX / CAE / PLM. Aplikasi FreeCad ini ditujukan langsung bagi para teknik mesin dan juga para desainer produk, namun secara keselurauhan aplikasi ini juga bisa dipergunakan untuk Proses rekayasa yang lebih luas seperti pada perancangan arsitektur atau pada spesialisasi teknik lainnya.",
-    "nick": "freecad",
-    "kat": "tp"
-  },
-  {
-    "id": 33,
-    "name": "LibreCAD",
-    "desc": "LibreCAD adalah Software CAD gratis yang dapat mendesain model 2D dengan sangat baik dengan tampilan yang sangat mudah dimengerti. LibreCad merupakan percabangan dari QCad yang dikembangkan sekitar tahun 2010-an. Qcad sendiri adalah aplikasi Cad 2D yang menyediaka versi gratis dan berbayar. Awalnya LibreCad bernama CADuntu namun, nama tersebut kurang sesuai dan akhirnya diganti dengan LibreCad. Pada awalnya LibreCad dibuat untuk membangun kemampuan pada sisi CAM menggunakan matchmate cnc router.",
-    "nick": "librecad",
-    "kat": "design"
-  },
-  {
-    "id": 34,
-    "name": "LibreCAD",
-    "desc": "LibreCAD adalah Software CAD gratis yang dapat mendesain model 2D dengan sangat baik dengan tampilan yang sangat mudah dimengerti. LibreCad merupakan percabangan dari QCad yang dikembangkan sekitar tahun 2010-an. Qcad sendiri adalah aplikasi Cad 2D yang menyediaka versi gratis dan berbayar. Awalnya LibreCad bernama CADuntu namun, nama tersebut kurang sesuai dan akhirnya diganti dengan LibreCad. Pada awalnya LibreCad dibuat untuk membangun kemampuan pada sisi CAM menggunakan matchmate cnc router.",
-    "nick": "librecad",
-    "kat": "tp"
-  },
-  {
-    "id": 35,
-    "name": "LibreCAD",
-    "desc": "LibreCAD adalah Software CAD gratis yang dapat mendesain model 2D dengan sangat baik dengan tampilan yang sangat mudah dimengerti. LibreCad merupakan percabangan dari QCad yang dikembangkan sekitar tahun 2010-an. Qcad sendiri adalah aplikasi Cad 2D yang menyediaka versi gratis dan berbayar. Awalnya LibreCad bernama CADuntu namun, nama tersebut kurang sesuai dan akhirnya diganti dengan LibreCad. Pada awalnya LibreCad dibuat untuk membangun kemampuan pada sisi CAM menggunakan matchmate cnc router.",
-    "nick": "librecad",
-    "kat": "tkbb"
-  },
-  {
-    "id": 36,
-    "name": "Blender",
-    "desc": "Blender adalah Aplikasi desain kreasi 3D open source. Mendukung keseluruhan modeling 3D-Pipeline, rigging, animasi, simulasi, rendering, komposisi, dan motion-tracking. bahkan edit video dan kreasi game.",
-    "nick": "blender",
-    "kat": "tav"
-  },
-  {
-    "id": 37,
-    "name": "FreeCAD",
-    "desc": "FreeCAD adalah Sebuah aplikasi open source untuk membuat pemodelan pada 3D CAD / MCAD / CAX / CAE / PLM. Aplikasi FreeCad ini ditujukan langsung bagi para teknik mesin dan juga para desainer produk, namun secara keselurauhan aplikasi ini juga bisa dipergunakan untuk Proses rekayasa yang lebih luas seperti pada perancangan arsitektur atau pada spesialisasi teknik lainnya.",
-    "nick": "freecad",
-    "kat": "tkr"
-  },
-  {
-    "id": 38,
-    "name": "Qucs",
-    "desc": "Qucs adalah aplikasi Multisim yang statis. Dia mampu melakukan simulasi rangkaian tetapi sinyal yang dihasilkan tidak kontinu. Meski demikian, Qucs punya kumpulan simulasi resmi siap pakai yang bisa Anda unduh dan pelajari. Simulasi yang disediakan sangat banyak.",
-    "nick": "qucs",
-    "kat": "tiptl"
-  },
-  {
-    "id": 39,
-    "name": "Fritzing",
-    "desc": "Fritzing merupakan aplikasi inisiasi hardware open-source yang membuat perangkat elektronik sebagai material kreatif untuk siapa saja. Fritzing  digunakan oleh desainer, seniman, engineer dan para penghobi elektronika untuk perancangan berbagai peralatan elektronika. Biasanya sebelum menggunakan program fritzing mereka akan membuat sebuah prototype dengan menggunakan komponen elektronika yang sebenarnya. ",
-    "nick": "fritzing",
-    "kat": "tiptl"
-  },
-  {
-    "id": 40,
-    "name": "Oracle VM VirtualBox",
-    "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
-    "nick": "virtualbox",
-    "kat": "simulate"
   }
 ]
