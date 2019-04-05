@@ -1,9 +1,29 @@
 <template>
-  <v-app dark>
-    <v-container grid-list-md>
-      <list :data="data"></list>
-    </v-container>
-    <v-dialog v-model="dialog" dark fullscreen hide-overlay transition="dialog-bottom-transition">
+  <div>
+    <v-layout row wrap>
+      <v-flex style="padding:20px" xs3 v-for="(i,index) in data" v-bind:key="index">
+        <v-card style="border-radius:20px" min-height="400">
+          <img
+            :src='"./../assets/img/" + i.nick + ".png"'
+            height="100"
+            style="margin:20px 0 0 20px"
+          >
+          <v-card-title primary-title>
+            <div>
+              <h3 class="headline mb-0">{{i.name}}</h3>
+              <div>{{ i.desc | deskripsi }}....</div>
+            </div>
+          </v-card-title>
+
+          <v-card-actions>
+            <v-btn @click="detail(index)" outline round color="white">
+              <span>Lihat Detail</span>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-flex>
+    </v-layout>
+    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
         <v-toolbar dark color="orange">
           <v-btn icon dark @click="dialog = false">
@@ -15,20 +35,18 @@
         <mdialog :detailData="detailData"></mdialog>
       </v-card>
     </v-dialog>
-  </v-app>
+  </div>
 </template>
 <script>
-import mdata from "./../assets/db/db.json";
-import mdialog from "./dialog"
-import list from "./list"
+import mdialog from "./dialog";
 export default {
   components: {
-    mdialog, list
+    mdialog
   },
+  props: ["data"],
   data() {
     return {
       dialog: false,
-      data: [],
       detailData: {
         id: 0,
         name: "",
@@ -40,19 +58,7 @@ export default {
     };
   },
   methods: {
-    findByKey(object, key, value) {
-      var result = [];
-      for (var i = 0; i < object.length; i++) {
-          var element = object[i];
-
-          if (element[key] === value) {
-          result.push(element);
-
-          }
-      }
-      return result;
-      },
-    detail(index) {
+      detail(index) {
       console.log(this.data[index].nick)
       this.detailData = this.data[index]
       // this.detailData.gambar.push("./../assets/img/" + this.data[index].nick + '-ss1.png', "./../assets/img/" + this.data[index].nick + '-ss2.png')
@@ -65,14 +71,6 @@ export default {
         }
       ]
       this.dialog = true
-    }
-  },
-  created() {
-    var m = this
-    for(var i = 0; i < mdata.length; i++){
-      if(mdata[i].kat.includes("design")){
-        m.data.push(mdata[i])
-      }
     }
   }
 };

@@ -10,28 +10,9 @@
         <v-flex xs12>
           <v-text-field class="mx-3" flat label="Search" prepend-inner-icon="search" v-model="search" solo-inverted></v-text-field>
         </v-flex>
-        <v-flex style="padding:20px" xs3 v-for="(i,index) in filteredData" v-bind:key="index">
-          <v-card style="border-radius:20px" min-height="400">
-            <img
-              :src='"./../assets/img/" + i.nick + ".png"'
-              height="100"
-              style="margin:20px 0 0 20px"
-            >
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">{{i.name}}</h3>
-                <div>{{ i.desc | deskripsi }}....</div>
-              </div>
-            </v-card-title>
-
-            <v-card-actions>
-              <v-btn @click="detail(index)" outline round color="white">
-                <span>Lihat Detail</span>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
+        
       </v-layout>
+      <list :data="filteredData"></list>
     </v-container>
     <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
@@ -48,11 +29,12 @@
   </v-app>
 </template>
 <script>
+import list from './list'
 import mdata from "./../assets/db/db.json";
 import mdialog from "./dialog";
 export default {
   components: {
-    mdialog
+    mdialog, list
   },
   data() {
     return {

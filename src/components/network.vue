@@ -1,23 +1,7 @@
 <template>
   <v-app dark>
     <v-container grid-list-md>
-      <v-layout row wrap align-content-center justify-center>
-        <v-flex xs4 v-for="(i,index) in data" v-bind:key="index">
-          <v-card>
-            <img :src='"./../assets/img/" + i.nick + ".png"' height="200"  style="padding-top:15px; padding-left:15px">
-            <v-card-title primary-title>
-              <div>
-                <h3 class="headline mb-0">{{i.name}}</h3>
-                <div>{{ i.desc | deskripsi }}....</div>
-              </div>
-            </v-card-title>
-
-            <v-card-actions>
-              <v-btn @click="detail(index)" flat color="orange">Lihat Detail</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-flex>
-      </v-layout>
+      <list :data="data"></list>
     </v-container>
     <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
@@ -36,9 +20,10 @@
 <script>
 import mdata from "./../assets/db/db.json";
 import mdialog from "./dialog"
+import list from './list'
 export default {
   components: {
-    mdialog
+    mdialog,list
   },
   data() {
     return {
@@ -83,8 +68,12 @@ export default {
     }
   },
   created() {
-    console.log(mdata);
-    this.data = this.findByKey(mdata, 'kat', 'network');
+    var m = this
+    for(var i = 0; i < mdata.length; i++){
+      if(mdata[i].kat.includes("network")){
+        m.data.push(mdata[i])
+      }
+    }
   }
 };
 </script>
