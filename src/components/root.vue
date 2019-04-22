@@ -53,6 +53,9 @@ export default {
         },
         {
           src: require("./../assets/img/car3.png")
+        },
+        {
+          src: require("./../assets/img/car5.png")
         }
       ],
       detailData: {

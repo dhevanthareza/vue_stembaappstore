@@ -26,7 +26,6 @@
             </v-carousel>
           </v-flex>
           <v-flex xs12>
-            <div v-if="progress" class="process">{{progressDetail}}</div>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -117,15 +116,13 @@ export default {
           console.log("ini sampe fixing");
           sudo.exec("/opt/stemba/rm.sh", (error, stdout, stderr) => {
             if (error) {
-              this.progress = false;
-              this.progressDetail = error;
-              console.log("fixing error : " + error);
+              alert("terjadi kesalahan")
+              this.progress = false
               return;
             }
             if (stderr) {
-              this.progress = false;
-              this.progressDetail = stderr;
-              console.log("fixing std error : " + stderr);
+              alert("aplikasi berhasil diinstall");
+              this.progress = false
               return;
             }
             this.progressDetail = this.progressDetail + stdout;

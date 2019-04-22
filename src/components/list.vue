@@ -23,9 +23,9 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
+    <v-dialog v-model="dialog" dark fullscreen hide-overlay transition="dialog-bottom-transition">
       <v-card>
-        <v-toolbar dark color="orange">
+        <v-toolbar dark >
           <v-btn icon dark @click="dialog = false">
             <v-icon>close</v-icon>
           </v-btn>
