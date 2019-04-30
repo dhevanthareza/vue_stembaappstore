@@ -222,5 +222,12 @@
     "desc": "Gdebi is a tiny little app that helps you install deb files more effectively by handling dependencies. Learn how to use Gdebi and make it the default application for installing deb packages.",
     "nick": "gdebi",
     "kat": "other"
+  },
+  {
+    "id": 32,
+    "name": "Gparted",
+    "desc": "GParted Live is a small bootable GNU/Linux distribution for x86 based computers. GParted Live enables you to use all the features of the latest versions of the GParted application.",
+    "nick": "gparted",
+    "kat": "other"
   }
 ]
