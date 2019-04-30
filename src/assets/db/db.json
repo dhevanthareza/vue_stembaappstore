@@ -229,5 +229,19 @@
     "desc": "GParted Live is a small bootable GNU/Linux distribution for x86 based computers. GParted Live enables you to use all the features of the latest versions of the GParted application.",
     "nick": "gparted",
     "kat": "other"
+  },
+  {
+    "id": 33,
+    "name": "XDM",
+    "desc": "Xtreme Download Manager, also known as XDM or XDMAN, is a popular cross-platform download manager available for Linux, Windows and Mac OS X. It is also compatible with all major web browsers such as Chrome, Firefox, Safari enabling you to download directly from XDM when you try to download something in your web browser.",
+    "nick": "xdm",
+    "kat": "other"
+  },
+  {
+    "id": 34,
+    "name": "UNetBootin",
+    "desc": "Xtreme Download Manager, also known as XDM or XDMAN, is a popular cross-platform download manager available for Linux, Windows and Mac OS X. It is also compatible with all major web browsers such as Chrome, Firefox, Safari enabling you to download directly from XDM when you try to download something in your web browser.",
+    "nick": "xdm",
+    "kat": "other"
   }
 ]
