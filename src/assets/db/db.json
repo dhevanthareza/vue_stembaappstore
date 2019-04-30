@@ -214,6 +214,13 @@
     "name": "Spotify",
     "desc": "Spotify is a Swedish audio streaming platform that provides DRM-protected music and podcasts from record labels and media companies. Spotify transformed music listening forever when it launched in Sweden in 2008. Spotify gives you access to millions of songs.",
     "nick": "spotify",
-    "kat": "design"
+    "kat": "other"
+  },
+  {
+    "id": 31,
+    "name": "Gdebi",
+    "desc": "Gdebi is a tiny little app that helps you install deb files more effectively by handling dependencies. Learn how to use Gdebi and make it the default application for installing deb packages.",
+    "nick": "gdebi",
+    "kat": "other"
   }
 ]
