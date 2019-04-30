@@ -240,8 +240,8 @@
   {
     "id": 34,
     "name": "UNetBootin",
-    "desc": "Xtreme Download Manager, also known as XDM or XDMAN, is a popular cross-platform download manager available for Linux, Windows and Mac OS X. It is also compatible with all major web browsers such as Chrome, Firefox, Safari enabling you to download directly from XDM when you try to download something in your web browser.",
-    "nick": "xdm",
+    "desc": "UNetbootin (Universal Netboot Installer) is a cross-platform utility that can create live USB systems and can load a variety of system utilities or install various Linux distributions and other operating systems without a CD.",
+    "nick": "unetbootin",
     "kat": "other"
   }
 ]
